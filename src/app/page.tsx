@@ -55,7 +55,7 @@ export default function Landing() {
               <span className="transition-transform group-hover:translate-x-0.5">→</span>
             </Link>
             <a
-              href="https://github.com/korini/tollgate"
+              href="https://github.com/korini1101/tollgate"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl
@@ -99,7 +99,7 @@ function Nav() {
           Docs
         </Link>
         <a
-          href="https://github.com/korini/tollgate"
+          href="https://github.com/korini1101/tollgate"
           target="_blank"
           rel="noopener noreferrer"
           className="text-xs font-mono text-gray-500 hover:text-gray-300 transition-colors
