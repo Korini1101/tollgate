@@ -28,17 +28,17 @@ export default function Landing() {
 
           <h1 className="font-mono font-bold leading-[1.02] tracking-tight
             text-[clamp(2.4rem,5.5vw,4rem)]">
-            AI answers,
+            0.01 USDC.
             <br />
-            paid <span className="text-accent">per query</span>
+            One <span className="text-accent">question</span>.
             <br />
-            in USDC.
+            Verified on-chain.
           </h1>
 
           <p className="mt-6 max-w-md text-base text-gray-400 leading-relaxed">
-            Tollgate is a pay-per-inference agent on Arc. No account, no API key,
-            no subscription. Your wallet pays 0.01 USDC, the payment is verified
-            on-chain, and only then does the model answer.
+            Tollgate is a pay-per-inference agent on Arc. Connect a wallet,
+            pay 0.01 USDC, get an answer. The payment is checked on-chain
+            before the model runs, not just trusted by the frontend.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -55,7 +55,7 @@ export default function Landing() {
               <span className="transition-transform group-hover:translate-x-0.5">→</span>
             </Link>
             <a
-              href="https://github.com/korini1101/tollgate"
+              href="https://github.com/korini/tollgate"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl
@@ -87,8 +87,7 @@ function Nav() {
       flex items-center justify-between">
       <div className="flex items-center gap-2">
         <GateMark />
-        <span className="font-mono font-bold text-lg tracking-tight">
-          Toll<span className="text-accent">gate</span></span>
+        <span className="font-mono font-bold text-lg tracking-tight">Toll<span className="text-accent">gate</span></span>
       </div>
       <div className="flex items-center gap-6">
         <Link
@@ -99,7 +98,7 @@ function Nav() {
           Docs
         </Link>
         <a
-          href="https://github.com/korini1101/tollgate"
+          href="https://github.com/korini/tollgate"
           target="_blank"
           rel="noopener noreferrer"
           className="text-xs font-mono text-gray-500 hover:text-gray-300 transition-colors
@@ -273,7 +272,7 @@ function Footer() {
         items-center justify-between gap-4">
         <div className="flex items-center gap-2 text-[11px] font-mono text-gray-700">
           <GateMark size={14} />
-          <span>Tollgate v0.3 · Arc Testnet · built for Ignyte hackathon</span>
+          <span>Tollgate v0.5 · Arc Testnet</span>
         </div>
         <div className="flex items-center gap-3">
           <span className="text-[11px] text-gray-700/60 font-mono">Made by Korini</span>

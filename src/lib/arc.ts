@@ -1,3 +1,7 @@
+// Manual ethers.js payment path. Kept alongside src/lib/appkit.ts (which
+// does the same send through Arc's official App Kit SDK) since App Kit
+// is still early and I want a fallback that doesn't depend on it while
+// I finish testing the migration.
 import { BrowserProvider, formatUnits } from "ethers";
 import {
   ARC_TESTNET,

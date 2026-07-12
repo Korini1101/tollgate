@@ -76,6 +76,38 @@ return Response.json({ answer: await runInference(query) });`}
         </p>
       </div>
 
+      <CodeBlock
+        label="Migrating payments to Arc App Kit"
+        code={`import { createAppKit } from "@circle-fin/app-kit";
+import { viemAdapter } from "@circle-fin/adapter-viem-v2";
+
+const kit = createAppKit();
+
+// same 0.01 USDC transfer, routed through Circle's official SDK
+// instead of a hand-rolled ethers.js sendTransaction call
+const result = await kit.send({
+  from: { adapter: viemAdapter, chain: "Arc_Testnet" },
+  to: TREASURY_ADDRESS,
+  amount: "0.01",
+  token: "USDC",
+});`}
+      />
+
+      <div className="border border-arc-700 rounded-xl p-4">
+        <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-2">
+          On-chain receipts
+        </p>
+        <p className="text-sm text-gray-400 leading-relaxed">
+          There's now a small contract, <code className="text-gray-300">TollgateReceipt.sol</code>,
+          deployed on Arc Testnet. It doesn't hold funds, it just logs an
+          event for each paid query (payer, amount, a hash of the question,
+          timestamp) so the payment history exists on-chain instead of only
+          in server memory. See <code className="text-gray-300">contracts/</code> in
+          the repo. It's intentionally minimal, no escrow yet, that's the
+          next step.
+        </p>
+      </div>
+
       <div className="border border-arc-700 rounded-xl p-4">
         <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-2">
           Network details

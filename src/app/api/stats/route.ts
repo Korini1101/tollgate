@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // In-memory fallback store (per server instance). On Vercel serverless this
-// resets between cold starts, which is expected for a hackathon demo, real
+// resets between cold starts, which is expected for now, real
 // persistence would use a database or the artifact storage API from the client.
 type StatsRecord = {
   totalQueries: number;

@@ -4,6 +4,11 @@ out/
 node_modules/
 npm-debug.log*
 
+# Hardhat
+artifacts/
+cache/
+typechain-types/
+
 # Env
 .env
 .env.local

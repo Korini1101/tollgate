@@ -5,7 +5,7 @@ export default function ArchDiagram() {
     <div className="border border-arc-700 rounded-xl overflow-hidden">
       <div className="px-4 py-3 border-b border-arc-700">
         <span className="text-xs font-mono text-gray-500 uppercase tracking-widest">
-          Architecture · Track 4, Agentic Economy
+          Architecture
         </span>
       </div>
       <div className="p-4">
@@ -54,19 +54,19 @@ export default function ArchDiagram() {
           <text x="385" y="119" textAnchor="middle" fill="#9ca3af" fontSize="9" fontFamily="monospace">/api/infer</text>
           <text x="385" y="132" textAnchor="middle" fill="#9ca3af" fontSize="9" fontFamily="monospace">Route Handler</text>
 
-          {/* ── Arrow: API → Claude ── */}
+          {/* ── Arrow: API → AI Model ── */}
           <line x1="440" y1="110" x2="488" y2="110"
             stroke="#4b5563" strokeWidth="1.5" markerEnd="url(#arrow)" strokeDasharray="4,2" />
           <text x="464" y="104" textAnchor="middle" fill="#6b7280" fontSize="8" fontFamily="monospace">prompt</text>
 
-          {/* ── Claude AI ── */}
+          {/* ── AI Inference ── */}
           <rect x="490" y="80" width="110" height="60" rx="10"
             fill="#1c2537" stroke="#6b83a8" strokeWidth="1.5" />
-          <text x="545" y="104" textAnchor="middle" fill="#6b83a8" fontSize="10" fontFamily="monospace">🤖 Claude AI</text>
-          <text x="545" y="119" textAnchor="middle" fill="#9ca3af" fontSize="9" fontFamily="monospace">claude-sonnet</text>
-          <text x="545" y="132" textAnchor="middle" fill="#9ca3af" fontSize="9" fontFamily="monospace">-4-6</text>
+          <text x="545" y="104" textAnchor="middle" fill="#6b83a8" fontSize="10" fontFamily="monospace">🤖 AI Model</text>
+          <text x="545" y="119" textAnchor="middle" fill="#9ca3af" fontSize="9" fontFamily="monospace">inference</text>
+          <text x="545" y="132" textAnchor="middle" fill="#9ca3af" fontSize="9" fontFamily="monospace">engine</text>
 
-          {/* ── Arrow: Claude → User (return path, below) ── */}
+          {/* ── Arrow: AI Model → User (return path, below) ── */}
           <path d="M545,140 Q545,180 385,180 Q225,180 70,170 L70,140"
             fill="none" stroke="#6b83a8" strokeWidth="1.5"
             strokeDasharray="4,2" markerEnd="url(#arrow-green)" />

@@ -47,15 +47,12 @@ export default function Home() {
         <div>
           <div className="flex items-center gap-2 mb-1">
             <span className="text-xs font-mono text-accent uppercase tracking-widest">
-              Arc Testnet · Track 4
+              Arc Testnet
             </span>
-            <span className="text-xs font-mono text-gray-700">◈</span>
-            <span className="text-xs font-mono text-gray-600">Agentic Economy</span>
           </div>
-          <h1 className="text-3xl font-bold font-mono tracking-tight">
-            Toll<span className="text-accent">gate</span></h1>
+          <h1 className="text-3xl font-bold font-mono tracking-tight">Toll<span className="text-accent">gate</span></h1>
           <p className="text-sm text-gray-500 mt-1 font-sans">
-            Pay 0.01 USDC on-chain, get an AI answer. Every query, every cent, on-chain.
+            Pay 0.01 USDC, get an AI answer. Every payment verified on-chain first.
           </p>
         </div>
         <WalletConnect onConnect={setWalletAddress} />
@@ -195,9 +192,6 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-arc-700 pt-6 mt-10 text-center">
-        <p className="text-xs text-gray-700 font-mono">
-          Built for Ignyte Challenges · Stablecoin Commerce Stack Hackathon
-        </p>
         <p className="text-xs text-gray-800 font-mono mt-1">
           Circle USDC · Arc Testnet
         </p>

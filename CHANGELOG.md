@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.5.0
+
+- Added `TollgateReceipt.sol`, a minimal contract deployed on Arc Testnet
+  that logs an on-chain event per paid query (payer, amount, question
+  hash, timestamp). No escrow yet, logging only, that's next.
+- Started migrating payments onto Arc App Kit (`@circle-fin/app-kit`)
+  instead of a hand-rolled ethers.js transfer, see `src/lib/appkit.ts`.
+  The manual path in `src/lib/arc.ts` stays as a fallback until the
+  migration is fully tested.
+- Hardhat added for contract compilation/deployment (`npm run compile`,
+  `npm run deploy:testnet`)
+- Docs tab updated with the App Kit snippet and a note on the receipt contract
+
 ## v0.4.0
 
 - New API tab: prepaid USDC credits + an API key per wallet
